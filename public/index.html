@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poolers Exam Shell — practice grademe under real exam conditions</title>
+  <meta name="description"
+    content="A 42-style timed C exam simulator — 4 exams, 116 subjects, levels, grademe and real-exam scoring." />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/exam.css?v=9" />
+  <link rel="stylesheet" href="/css/landing.css?v=2" />
+</head>
+
+<body class="landing-body">
+  <a class="skip-link" href="#how">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="/">
+      <span class="shell-logo">42</span>
+      <span class="nav-brand-text">
+        <strong>Poolers Exam Shell</strong>
+        <span>practice mode · local</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#scoring">Scoring</a>
+      <a href="#rules">Rules</a>
+      <a href="#commands">Commands</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="/examshell">Launch<span class="hide-sm"> Exam Shell</span> →</a>
+  </header>
+
+  <main>
+    <!-- ─────────────────────────── HERO ─────────────────────────── -->
+    <section class="hero" id="hero">
+      <!-- desktop: 3D screenshot collage. hidden on mobile / reduced-motion-safe -->
+      <div class="stage" id="stage" aria-hidden="true">
+        <div class="stage-space" id="stageSpace">
+          <div class="layer layer-back">
+            <figure class="tile tile-a"><img src="/img/examshell-screenshot.png" alt="" decoding="async" /></figure>
+            <figure class="tile tile-b"><img src="/img/image-1786230569492.png" alt="" decoding="async" /></figure>
+          </div>
+          <div class="layer layer-mid">
+            <figure class="tile tile-c"><img src="/img/examshell-screenshot.png" alt="" decoding="async" /></figure>
+            <figure class="tile tile-d"><img src="/img/image-1786230569492.png" alt="" decoding="async" /></figure>
+          </div>
+          <div class="layer layer-front">
+            <figure class="tile tile-e"><img src="/img/examshell-screenshot.png" alt="" decoding="async" /></figure>
+            <figure class="tile tile-f"><img src="/img/image-1786230569492.png" alt="" decoding="async" /></figure>
+          </div>
+        </div>
+        <div class="stage-haze"></div>
+        <div class="stage-vignette"></div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> 42 piscine · exam simulator</p>
+        <h1 class="hero-title">Welcome <span class="grad">Pooler</span></h1>
+        <p class="hero-lede">
+          A timed exam booth in your browser: editor, subject pane, real terminal and sandboxed grading.
+          Type it by hand, run <code>grademe</code>, take the OK or the KO. Same rhythm as the real thing —
+          minus the stakes.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="/examshell">Launch Exam Shell →</a>
+          <a class="btn btn-ghost btn-lg" href="#how">How it works</a>
+        </div>
+        <ul class="hero-facts">
+          <li><b>4</b> exams</li>
+          <li><b>116</b> subjects</li>
+          <li><b>4–8h</b> on the clock</li>
+          <li><b>100</b> pts</li>
+        </ul>
+      </div>
+
+      <!-- mobile-only hero visual: one framed shot, no 3D, no parallax -->
+      <div class="hero-shot" aria-hidden="true">
+        <div class="shot-frame">
+          <div class="shot-bar"><i></i><i></i><i></i><span>examshell</span></div>
+          <div class="shot-body">
+            <img src="/img/examshell-screenshot.png" alt="" decoding="async" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ───────────────────────── SHOWCASE ───────────────────────── -->
+    <section class="showcase reveal">
+      <div class="wrap">
+        <div class="showcase-frame">
+          <div class="frame-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="frame-title">exam00 · Normal · L0</span>
+            <span class="frame-chip">03:59:49</span>
+          </div>
+          <img src="/img/examshell-screenshot.png" alt="The exam shell: code editor on the left, subject on the right, terminal below." loading="lazy" decoding="async" />
+        </div>
+        <div class="showcase-notes">
+          <div><b>Editor</b><span>paste &amp; drop blocked</span></div>
+          <div><b>Subject</b><span>prototype, allowed functions</span></div>
+          <div><b>Terminal</b><span>grademe, status, levels</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── HOW ──────────────────────────── -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2 class="section-title">How it works</h2>
+        <div class="grid-3">
+          <article class="card step reveal">
+            <div class="step-no">01</div>
+            <h3>Pick an exam</h3>
+            <p>Type <code>examshell</code> in the terminal, choose exam00 / 01 / 02 / final, then a difficulty.
+              The clock starts immediately — 4h for exam00–02, 8h for final.</p>
+          </article>
+          <article class="card step reveal" style="--d:.08s">
+            <div class="step-no">02</div>
+            <h3>Write it by hand</h3>
+            <p>Every exercise gives you a subject on the right and an empty <code>.c</code> file on the left.
+              Paste and drag-drop are blocked — client <em>and</em> server side.</p>
+          </article>
+          <article class="card step reveal" style="--d:.16s">
+            <div class="step-no">03</div>
+            <h3>Submit &amp; get graded</h3>
+            <p>Run <code>grademe</code> (or Ctrl+Enter). Your code compiles with <code>-Wall -Wextra -Werror</code>
+              in a sandbox, runs against the expected output, and comes back OK or KO.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── SCORING ────────────────────────── -->
+    <section class="section" id="scoring">
+      <div class="wrap">
+        <h2 class="section-title">Exams, levels &amp; points</h2>
+        <p class="section-lede">
+          exam00/01/02 each have <strong>10 levels</strong> with <strong>2 random exercises per level</strong>
+          drawn from a shared pool of 116 — clear both to advance. <code>final</code> has its own fixed
+          42-exercise curriculum across <strong>15 levels</strong>; each attempt still assigns
+          <strong>2 random exercises from that level's list</strong>. Points land per level cleared, graded out
+          of 100 like a real piscine exam.
+        </p>
+
+        <div class="table-scroll reveal">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Exam</th>
+                <th>Focus</th>
+                <th>Duration</th>
+                <th>Levels</th>
+                <th>Points / level</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">exam00</td>
+                <td class="muted">C00 display / basics</td>
+                <td>4h</td>
+                <td>10</td>
+                <td class="num">10 pts</td>
+                <td class="num">100 pts</td>
+              </tr>
+              <tr>
+                <td class="mono">exam01</td>
+                <td class="muted">pointers &amp; strings</td>
+                <td>4h</td>
+                <td>10</td>
+                <td class="num">10 pts</td>
+                <td class="num">100 pts</td>
+              </tr>
+              <tr>
+                <td class="mono">exam02</td>
+                <td class="muted">atoi / recursion / primes</td>
+                <td>4h</td>
+                <td>10</td>
+                <td class="num">10 pts</td>
+                <td class="num">100 pts</td>
+              </tr>
+              <tr class="final">
+                <td class="mono">final</td>
+                <td class="muted">mixed review · 42 exercises</td>
+                <td>8h</td>
+                <td>15</td>
+                <td class="num">6 pts</td>
+                <td class="num">100 pts*</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note">
+          Your live score (<code>earned / total</code>) sits in the header once an exam is running, and in the
+          <code>status</code> command. exam00/01/02 levels 5+ pull harder exercises depending on difficulty;
+          <code>final</code>'s list is the same regardless.
+          <br />* <code>final</code> awards 6 pts on each of its 15 levels (90 pts) plus a 10 pt completion bonus
+          on the last one — a full clear lands on exactly 100, same as every other exam.
+        </p>
+      </div>
+    </section>
+
+    <!-- ──────────────────────── DIFFICULTY ──────────────────────── -->
+    <section class="section" id="difficulty">
+      <div class="wrap">
+        <h2 class="section-title">Difficulty</h2>
+        <p class="section-lede">Applies to exam00/01/02 only — <code>final</code>'s curriculum is fixed.</p>
+        <div class="grid-3">
+          <article class="card diff normal reveal">
+            <div class="diff-head"><span class="diff-name">Normal</span><span class="bars"><i></i><i></i><i></i></span></div>
+            <p>Classic pacing across all 10 levels — the baseline experience.</p>
+          </article>
+          <article class="card diff hard reveal" style="--d:.08s">
+            <div class="diff-head"><span class="diff-name">Hard</span><span class="bars"><i></i><i></i><i></i></span></div>
+            <p>Tougher exercises earlier — same levels, same scoring, less room to warm up.</p>
+          </article>
+          <article class="card diff extreme reveal" style="--d:.16s">
+            <div class="diff-head"><span class="diff-name">Extreme</span><span class="bars"><i></i><i></i><i></i></span></div>
+            <p>Densest exercise pools, hard problems from the early levels on.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── RULES ─────────────────────────── -->
+    <section class="section" id="rules">
+      <div class="wrap">
+        <h2 class="section-title">Rules</h2>
+        <ul class="rules">
+          <li class="reveal"><strong>Type it yourself.</strong> Paste and file-drop are blocked in the editor —
+            caught client and server side.</li>
+          <li class="reveal" style="--d:.05s"><strong>Allowed functions only.</strong> Each exercise lists what
+            you may call; anything else is a KO.</li>
+          <li class="reveal" style="--d:.1s"><strong>No <code>main</code>.</strong> The grader links its own —
+            your file holds the required function(s) and nothing more.</li>
+          <li class="reveal" style="--d:.15s"><strong>Crash / timeout / wrong output ⇒ KO.</strong> Exact stdout
+            match against the expected output, in an isolated sandbox.</li>
+          <li class="reveal" style="--d:.2s"><strong>Clear 2 per level.</strong> Both must pass before the next
+            unlocks — for <code>final</code>, those 2 come at random from that level's fixed list.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── COMMANDS ───────────────────────── -->
+    <section class="section" id="commands">
+      <div class="wrap">
+        <h2 class="section-title">Terminal cheat sheet</h2>
+        <div class="cmd-card reveal">
+          <div class="cmd-bar"><span class="dots"><i></i><i></i><i></i></span><span>examshell</span></div>
+          <dl class="cmd-list">
+            <div><dt>examshell</dt><dd>start the exam picker (or: <code>examshell start exam00 hard</code>)</dd></div>
+            <div><dt>grademe</dt><dd>compile + grade the current exercise</dd></div>
+            <div><dt>status</dt><dd>exam, level and score overview</dd></div>
+            <div><dt>time</dt><dd>remaining time on the clock</dd></div>
+            <div><dt>levels</dt><dd>per-level progress</dd></div>
+            <div><dt>leave</dt><dd>abandon the current exam</dd></div>
+            <div><dt>help</dt><dd>full rules &amp; command list</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── CTA ──────────────────────────── -->
+    <section class="cta-final">
+      <div class="wrap">
+        <h2>The clock doesn't care that it's practice.</h2>
+        <p>Four exams, 116 subjects, one terminal. Start whenever you're ready.</p>
+        <a class="btn btn-primary btn-lg" href="/examshell">Launch Exam Shell →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span class="shell-logo">42</span>
+      <p>Poolers Exam Shell — practice mode, runs entirely local except sandboxed compiles.</p>
+      <a class="btn btn-ghost btn-sm" href="/examshell">Launch →</a>
+    </div>
+  </footer>
+
+  <script src="/js/landing.js?v=1" defer></script>
+</body>
+
+</html>

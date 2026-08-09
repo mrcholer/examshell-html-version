@@ -1,0 +1,17 @@
+{
+  "name": "poolers-examshell",
+  "version": "1.0.0",
+  "description": "Standalone 42-style exam shell — timed levels, terminal, anti-cheat editor, sandboxed grading",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "uuid": "^11.0.5"
+  }
+}

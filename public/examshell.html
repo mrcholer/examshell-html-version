@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280" />
+  <title>Poolers Exam Shell</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/exam.css?v=15" />
+  <script src="/js/desktop-only.js?v=1"></script>
+</head>
+
+<body>
+  <div class="shell" id="shell">
+    <!-- ══════════════════════════ TOP BAR ══════════════════════════
+         Identity on the left, live exam state in the middle, the two
+         actions that end a run on the right. Nothing that merely shows
+         or hides a pane lives up here any more — those controls now sit
+         on the panes themselves. -->
+    <header class="shell-bar">
+      <div class="shell-brand">
+        <a class="shell-logo" href="/" title="Back to landing page">42</a>
+        <div class="shell-brand-text">
+          <strong>Poolers Exam Shell</strong>
+          <span class="status-chip idle" id="shell-status">idle</span>
+        </div>
+      </div>
+
+      <!-- level rail: the whole exam at a glance, replaces guesswork -->
+      <div class="level-rail hidden" id="level-rail" title="Level progress">
+        <span class="rail-cap" id="rail-cap">L0</span>
+        <div class="rail-track" id="rail-track"></div>
+        <span class="rail-cap rail-cap-end" id="rail-total">/ 10</span>
+      </div>
+
+      <div class="shell-bar-actions">
+        <span class="stat-chip score-chip hidden" id="score-chip" title="Score">0/0 pts</span>
+        <span class="stat-chip timer-chip hidden" id="timer-chip" title="Remaining time">--:--:--</span>
+        <button type="button" class="shell-btn primary hidden" id="btn-grade"
+          title="Grade current exercise (Ctrl+Enter)">
+          grademe
+          <kbd>⌃↵</kbd>
+        </button>
+        <button type="button" class="shell-btn danger-ghost hidden" id="btn-leave" title="Abandon exam">leave</button>
+      </div>
+    </header>
+
+    <main class="shell-main" id="shell-main">
+      <section class="workspace hidden" id="workspace">
+        <!-- ── code pane ── -->
+        <div class="pane code-pane">
+          <div class="pane-top">
+            <div class="pane-top-left">
+              <span class="pane-label">rendu</span>
+              <span id="code-filename" class="pane-file">—.c</span>
+            </div>
+            <div class="pane-top-right">
+              <span class="pill" id="level-pill">L0</span>
+            </div>
+          </div>
+          <div class="exam-editor-wrap" id="exam-editor-wrap">
+            <div id="exam-editor" class="exam-editor"></div>
+            <div class="drop-overlay hidden" id="drop-overlay">Drop not allowed — type your code</div>
+          </div>
+        </div>
+
+        <div class="split-handle" id="split-handle" title="Drag to resize"></div>
+
+        <!-- ── subject pane: subject / traces / passed files all live here,
+               so "files" no longer needs a top-bar button or a floating panel ── -->
+        <div class="pane subject-pane">
+          <div class="pane-top">
+            <div class="pane-top-left">
+              <div class="subject-tabs" id="subject-tabs" role="tablist">
+                <button type="button" class="subject-tab active" data-tab="subject" role="tab">subject</button>
+                <button type="button" class="subject-tab" data-tab="traces" role="tab">traces<span
+                    class="tab-badge hidden" id="traces-badge">0</span></button>
+                <button type="button" class="subject-tab" data-tab="files" role="tab">files</button>
+              </div>
+            </div>
+            <div class="pane-top-right">
+              <span class="pill soft" id="day-pill">day</span>
+              <!-- collapse lives on the pane it collapses -->
+              <button type="button" class="pane-btn hidden" id="btn-toggle-subject" title="Collapse subject pane"
+                aria-label="Collapse subject pane">
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div id="subject-view" class="subject-view markdown-body"></div>
+          <div id="traces-view" class="subject-view traces-view hidden"></div>
+          <div id="passed-view" class="subject-view passed-view hidden"></div>
+        </div>
+
+        <!-- rail shown while the subject pane is collapsed, so it can come back -->
+        <button type="button" class="pane-restore" id="btn-restore-subject" title="Show subject pane">
+          <span>subject</span>
+        </button>
+      </section>
+
+      <div class="term-resize hidden" id="term-resize" title="Drag to resize terminal"></div>
+
+      <section class="term-wrap" id="term-wrap">
+        <div class="term-tabbar" id="term-tabbar">
+          <div class="term-tabs" id="term-tabs" role="tablist" aria-label="Terminals"></div>
+          <div class="term-tab-actions">
+            <button type="button" class="term-icon-btn" id="btn-term-new" title="New terminal">+</button>
+            <button type="button" class="term-icon-btn" id="btn-term-split" title="Split terminal">▭</button>
+            <button type="button" class="term-icon-btn" id="btn-term-kill" title="Kill terminal">×</button>
+            <span class="term-actions-sep"></span>
+            <!-- collapse lives on the terminal's own chrome -->
+            <button type="button" class="term-icon-btn hidden" id="btn-toggle-terminal" title="Collapse terminal"
+              aria-label="Collapse terminal">
+              <svg viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="term-panels" id="term-panels"></div>
+      </section>
+    </main>
+
+    <!-- passed-file reader, opened from the files tab -->
+    <div class="passed-viewer hidden" id="passed-viewer">
+      <div class="passed-viewer-card">
+        <div class="passed-viewer-head">
+          <span id="passed-viewer-title">file.c</span>
+          <button type="button" class="term-icon-btn" id="btn-close-viewer" title="Close">×</button>
+        </div>
+        <pre class="passed-viewer-code" id="passed-viewer-code"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js"></script>
+  <script src="/js/atom-one-dark.js?v=2"></script>
+  <script src="/js/exam.js?v=26"></script>
+  <script src="/js/examshell.js?v=23"></script>
+</body>
+
+</html>

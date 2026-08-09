@@ -1,0 +1,1815 @@
+{
+  "exercises": {
+    "rev_print": {
+      "id": "rev_print",
+      "name": "rev_print",
+      "filename": "rev_print.c",
+      "allowedFiles": [
+        "rev_print.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "rev_print",
+        "filename": "rev_print.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string and displays it reversed, followed\nby a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./rev_print \"hello\" | cat -e\nolleh$\n$> ./rev_print \"a\" | cat -e\na$\n$> ./rev_print | cat -e\n$\n$> ./rev_print \"ab\" \"cd\" | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello"
+          ],
+          "stdin": "",
+          "expected": "olleh\n"
+        },
+        {
+          "args": [
+            "a"
+          ],
+          "stdin": "",
+          "expected": "a\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [
+            "ab",
+            "cd"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "maff_alpha": {
+      "id": "maff_alpha",
+      "name": "maff_alpha",
+      "filename": "maff_alpha.c",
+      "allowedFiles": [
+        "maff_alpha.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "maff_alpha",
+        "filename": "maff_alpha.c",
+        "allowed": "write",
+        "description": "Write a program that displays the alphabet in lowercase, on a single\nline, in ascending order, followed by a newline.\nParameters, if any, are ignored.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./maff_alpha | cat -e\nabcdefghijklmnopqrstuvwxyz$\n$> ./maff_alpha \"ignored\" | cat -e\nabcdefghijklmnopqrstuvwxyz$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "abcdefghijklmnopqrstuvwxyz\n"
+        },
+        {
+          "args": [
+            "ignored"
+          ],
+          "stdin": "",
+          "expected": "abcdefghijklmnopqrstuvwxyz\n"
+        }
+      ]
+    },
+    "maff_revalpha": {
+      "id": "maff_revalpha",
+      "name": "maff_revalpha",
+      "filename": "maff_revalpha.c",
+      "allowedFiles": [
+        "maff_revalpha.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "maff_revalpha",
+        "filename": "maff_revalpha.c",
+        "allowed": "write",
+        "description": "Write a program that displays the alphabet in lowercase, on a single\nline, in descending order, followed by a newline.\nParameters, if any, are ignored.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./maff_revalpha | cat -e\nzyxwvutsrqponmlkjihgfedcba$\n$> ./maff_revalpha \"ignored\" | cat -e\nzyxwvutsrqponmlkjihgfedcba$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "zyxwvutsrqponmlkjihgfedcba\n"
+        },
+        {
+          "args": [
+            "ignored"
+          ],
+          "stdin": "",
+          "expected": "zyxwvutsrqponmlkjihgfedcba\n"
+        }
+      ]
+    },
+    "write_string": {
+      "id": "write_string",
+      "name": "write_string",
+      "filename": "write_string.c",
+      "allowedFiles": [
+        "write_string.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "write_string",
+        "filename": "write_string.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\nit as-is, followed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./write_string \"hello\" | cat -e\nhello$\n$> ./write_string | cat -e\n$\n$> ./write_string \"a\" \"b\" | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello"
+          ],
+          "stdin": "",
+          "expected": "hello\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [
+            "a",
+            "b"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "odd": {
+      "id": "odd",
+      "name": "odd",
+      "filename": "odd.c",
+      "allowedFiles": [
+        "odd.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "odd",
+        "filename": "odd.c",
+        "allowed": "write",
+        "description": "Write a program that takes one integer as a parameter.\nIf that number is odd, display `Odd number` followed by a newline.\nIn any other case (even number, wrong number of parameters), display\nnothing at all.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./odd \"3\" | cat -e\nOdd number$\n$> ./odd \"4\" | cat -e\n$\n$> ./odd \"-7\" | cat -e\nOdd number$\n$> ./odd \"0\" | cat -e\n$\n$> ./odd | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "3"
+          ],
+          "stdin": "",
+          "expected": "Odd number\n"
+        },
+        {
+          "args": [
+            "4"
+          ],
+          "stdin": "",
+          "expected": ""
+        },
+        {
+          "args": [
+            "-7"
+          ],
+          "stdin": "",
+          "expected": "Odd number\n"
+        },
+        {
+          "args": [
+            "0"
+          ],
+          "stdin": "",
+          "expected": ""
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": ""
+        }
+      ]
+    },
+    "even": {
+      "id": "even",
+      "name": "even",
+      "filename": "even.c",
+      "allowedFiles": [
+        "even.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "even",
+        "filename": "even.c",
+        "allowed": "write",
+        "description": "Write a program that takes one integer as a parameter.\nIf that number is even, display `Even number` followed by a newline.\nIn any other case (odd number, wrong number of parameters), display\nnothing at all.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./even \"4\" | cat -e\nEven number$\n$> ./even \"3\" | cat -e\n$\n$> ./even \"0\" | cat -e\nEven number$\n$> ./even \"-2\" | cat -e\nEven number$\n$> ./even | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "4"
+          ],
+          "stdin": "",
+          "expected": "Even number\n"
+        },
+        {
+          "args": [
+            "3"
+          ],
+          "stdin": "",
+          "expected": ""
+        },
+        {
+          "args": [
+            "0"
+          ],
+          "stdin": "",
+          "expected": "Even number\n"
+        },
+        {
+          "args": [
+            "-2"
+          ],
+          "stdin": "",
+          "expected": "Even number\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": ""
+        }
+      ]
+    },
+    "interval_space": {
+      "id": "interval_space",
+      "name": "interval_space",
+      "filename": "interval_space.c",
+      "allowedFiles": [
+        "interval_space.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "interval_space",
+        "filename": "interval_space.c",
+        "allowed": "write",
+        "description": "Write a program that takes two integers as parameters and displays\nevery integer from the first to the second (inclusive), separated by a\nsingle space, followed by a newline.\nIf the first integer is greater than the second, or the number of\nparameters is not 2, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./interval_space \"3\" \"7\" | cat -e\n3 4 5 6 7$\n$> ./interval_space \"5\" \"5\" | cat -e\n5$\n$> ./interval_space \"7\" \"3\" | cat -e\n$\n$> ./interval_space | cat -e\n$\n$> ./interval_space \"-2\" \"2\" | cat -e\n-2 -1 0 1 2$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "3",
+            "7"
+          ],
+          "stdin": "",
+          "expected": "3 4 5 6 7\n"
+        },
+        {
+          "args": [
+            "5",
+            "5"
+          ],
+          "stdin": "",
+          "expected": "5\n"
+        },
+        {
+          "args": [
+            "7",
+            "3"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [
+            "-2",
+            "2"
+          ],
+          "stdin": "",
+          "expected": "-2 -1 0 1 2\n"
+        }
+      ]
+    },
+    "occ_a": {
+      "id": "occ_a",
+      "name": "occ_a",
+      "filename": "occ_a.c",
+      "allowedFiles": [
+        "occ_a.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "occ_a",
+        "filename": "occ_a.c",
+        "allowed": "write",
+        "description": "Write a program that counts how many times the character `a` (lowercase)\nappears across all its parameters, then displays the total as a number\nfollowed by a newline.\nIf there are no parameters, display `0`.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./occ_a \"banana\" | cat -e\n3$\n$> ./occ_a \"apple\" \"banana\" | cat -e\n4$\n$> ./occ_a | cat -e\n0$\n$> ./occ_a \"xyz\" | cat -e\n0$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "banana"
+          ],
+          "stdin": "",
+          "expected": "3\n"
+        },
+        {
+          "args": [
+            "apple",
+            "banana"
+          ],
+          "stdin": "",
+          "expected": "4\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [
+            "xyz"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        }
+      ]
+    },
+    "occ_z": {
+      "id": "occ_z",
+      "name": "occ_z",
+      "filename": "occ_z.c",
+      "allowedFiles": [
+        "occ_z.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "occ_z",
+        "filename": "occ_z.c",
+        "allowed": "write",
+        "description": "Write a program that counts how many times the character `z` (lowercase)\nappears across all its parameters, then displays the total as a number\nfollowed by a newline.\nIf there are no parameters, display `0`.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./occ_z \"zzz\" \"abz\" | cat -e\n4$\n$> ./occ_z | cat -e\n0$\n$> ./occ_z \"buzz\" \"fizz\" | cat -e\n4$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "zzz",
+            "abz"
+          ],
+          "stdin": "",
+          "expected": "4\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [
+            "buzz",
+            "fizz"
+          ],
+          "stdin": "",
+          "expected": "4\n"
+        }
+      ]
+    },
+    "count_len": {
+      "id": "count_len",
+      "name": "count_len",
+      "filename": "count_len.c",
+      "allowedFiles": [
+        "count_len.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "count_len",
+        "filename": "count_len.c",
+        "allowed": "write",
+        "description": "Write a program that displays the total number of characters across all\nof its parameters (not counting spaces between them), followed by a\nnewline.\nIf there are no parameters, display `0`.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./count_len \"ab\" \"cde\" | cat -e\n5$\n$> ./count_len | cat -e\n0$\n$> ./count_len \"x\" \"yz\" \"w\" | cat -e\n4$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "ab",
+            "cde"
+          ],
+          "stdin": "",
+          "expected": "5\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [
+            "x",
+            "yz",
+            "w"
+          ],
+          "stdin": "",
+          "expected": "4\n"
+        }
+      ]
+    },
+    "count_alen": {
+      "id": "count_alen",
+      "name": "count_alen",
+      "filename": "count_alen.c",
+      "allowedFiles": [
+        "count_alen.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "count_alen",
+        "filename": "count_alen.c",
+        "allowed": "write",
+        "description": "Write a program that displays the total number of alphabetic characters\n(`a`-`z`, `A`-`Z`) across all of its parameters, followed by a newline.\nIf there are no parameters, display `0`.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./count_alen \"ab12\" \"cd\" | cat -e\n4$\n$> ./count_alen | cat -e\n0$\n$> ./count_alen \"1234\" | cat -e\n0$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "ab12",
+            "cd"
+          ],
+          "stdin": "",
+          "expected": "4\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [
+            "1234"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        }
+      ]
+    },
+    "nth_char": {
+      "id": "nth_char",
+      "name": "nth_char",
+      "filename": "nth_char.c",
+      "allowedFiles": [
+        "nth_char.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "nth_char",
+        "filename": "nth_char.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string and an index N as parameters, then\ndisplays the character at index N in the string, followed by a newline.\nIf N is out of bounds, or the number of parameters is not 2, simply\ndisplay a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./nth_char \"hello\" \"1\" | cat -e\ne$\n$> ./nth_char \"hello\" \"0\" | cat -e\nh$\n$> ./nth_char \"hello\" \"10\" | cat -e\n$\n$> ./nth_char \"hello\" \"-1\" | cat -e\n$\n$> ./nth_char | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello",
+            "1"
+          ],
+          "stdin": "",
+          "expected": "e\n"
+        },
+        {
+          "args": [
+            "hello",
+            "0"
+          ],
+          "stdin": "",
+          "expected": "h\n"
+        },
+        {
+          "args": [
+            "hello",
+            "10"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [
+            "hello",
+            "-1"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "rle": {
+      "id": "rle",
+      "name": "rle",
+      "filename": "rle.c",
+      "allowedFiles": [
+        "rle.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "rle",
+        "filename": "rle.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string and displays it encoded using Run-Length\nEncoding, followed by a newline.\nRun-Length Encoding replaces each maximal sequence of identical consecutive\ncharacters (a \"run\") with the number of characters in the run followed by the\ncharacter itself. A run cannot exceed 9 characters: if more than 9 identical\ncharacters follow each other, split them into multiple chunks of at most 9.\nIf a run (or chunk) has only 1 character, display the character alone,\nwithout the count.\nIf the number of parameters is not 1, or if the string is empty, simply\ndisplay a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./rle \"aaaaaaaaaaaaaaaaaaaaabbbvfe\" | cat -e\n9a9a3a3bvfe$\n$> ./rle \"aabbbbcccccccccccccc\" | cat -e\n2a4b9c5c$\n$> ./rle \"\" | cat -e\n$\n$> ./rle \"a\" \"b\" | cat -e\n$\n$> ./rle \"hello\" | cat -e\nhe2lo$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "aaaaaaaaaaaaaaaaaaaaabbbvfe"
+          ],
+          "stdin": "",
+          "expected": "9a9a3a3bvfe\n"
+        },
+        {
+          "args": [
+            "aabbbbcccccccccccccc"
+          ],
+          "stdin": "",
+          "expected": "2a4b9c5c\n"
+        },
+        {
+          "args": [
+            ""
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [
+            "a",
+            "b"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [
+            "hello"
+          ],
+          "stdin": "",
+          "expected": "he2lo\n"
+        }
+      ]
+    },
+    "digit_sum": {
+      "id": "digit_sum",
+      "name": "digit_sum",
+      "filename": "digit_sum.c",
+      "allowedFiles": [
+        "digit_sum.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "digit_sum",
+        "filename": "digit_sum.c",
+        "allowed": "write",
+        "description": "Write a program that takes one integer as a parameter and displays the\nsum of its decimal digits, followed by a newline (the sign is ignored).\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./digit_sum \"123\" | cat -e\n6$\n$> ./digit_sum \"-45\" | cat -e\n9$\n$> ./digit_sum \"0\" | cat -e\n0$\n$> ./digit_sum | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "123"
+          ],
+          "stdin": "",
+          "expected": "6\n"
+        },
+        {
+          "args": [
+            "-45"
+          ],
+          "stdin": "",
+          "expected": "9\n"
+        },
+        {
+          "args": [
+            "0"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "first_last_char": {
+      "id": "first_last_char",
+      "name": "first_last_char",
+      "filename": "first_last_char.c",
+      "allowedFiles": [
+        "first_last_char.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "first_last_char",
+        "filename": "first_last_char.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\nits first and last character concatenated, followed by a newline.\nIf the string has only one character, display it once.\nIf the string is empty, or the number of parameters is not 1, simply\ndisplay a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./first_last_char \"hello\" | cat -e\nho$\n$> ./first_last_char \"a\" | cat -e\na$\n$> ./first_last_char \"ab\" | cat -e\nab$\n$> ./first_last_char | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello"
+          ],
+          "stdin": "",
+          "expected": "ho\n"
+        },
+        {
+          "args": [
+            "a"
+          ],
+          "stdin": "",
+          "expected": "a\n"
+        },
+        {
+          "args": [
+            "ab"
+          ],
+          "stdin": "",
+          "expected": "ab\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "count_letters": {
+      "id": "count_letters",
+      "name": "count_letters",
+      "filename": "count_letters.c",
+      "allowedFiles": [
+        "count_letters.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "count_letters",
+        "filename": "count_letters.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\nthe number of alphabetic characters (`a`-`z`, `A`-`Z`) it contains,\nfollowed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./count_letters \"Hello World!\" | cat -e\n10$\n$> ./count_letters \"abc123\" | cat -e\n3$\n$> ./count_letters | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "Hello World!"
+          ],
+          "stdin": "",
+          "expected": "10\n"
+        },
+        {
+          "args": [
+            "abc123"
+          ],
+          "stdin": "",
+          "expected": "3\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "pingpong": {
+      "id": "pingpong",
+      "name": "pingpong",
+      "filename": "pingpong.c",
+      "allowedFiles": [
+        "pingpong.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "pingpong",
+        "filename": "pingpong.c",
+        "allowed": "write",
+        "description": "Write a program that takes one integer N as a parameter. For every\ninteger `i` from 1 to N: if `i` is a multiple of 2 and 3, display\n`pingpong`; else if `i` is a multiple of 2, display `ping`; else if `i`\nis a multiple of 3, display `pong`; otherwise display `i` itself. Values\nare separated by a single space, and the whole line ends with a newline.\nIf N is less than 1, or the number of parameters is not 1, simply\ndisplay a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./pingpong \"15\" | cat -e\n1 ping pong ping 5 pingpong 7 ping pong ping 11 pingpong 13 ping pong$\n$> ./pingpong \"1\" | cat -e\n1$\n$> ./pingpong \"6\" | cat -e\n1 ping pong ping 5 pingpong$\n$> ./pingpong \"0\" | cat -e\n$\n$> ./pingpong | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "15"
+          ],
+          "stdin": "",
+          "expected": "1 ping pong ping 5 pingpong 7 ping pong ping 11 pingpong 13 ping pong\n"
+        },
+        {
+          "args": [
+            "1"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [
+            "6"
+          ],
+          "stdin": "",
+          "expected": "1 ping pong ping 5 pingpong\n"
+        },
+        {
+          "args": [
+            "0"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "aff_first_param": {
+      "id": "aff_first_param",
+      "name": "aff_first_param",
+      "filename": "aff_first_param.c",
+      "allowedFiles": [
+        "aff_first_param.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "aff_first_param",
+        "filename": "aff_first_param.c",
+        "allowed": "write",
+        "description": "Write a program that displays its first parameter followed by a\nnewline.\nIf there are no parameters, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./aff_first_param \"hello\" \"world\" | cat -e\nhello$\n$> ./aff_first_param \"solo\" | cat -e\nsolo$\n$> ./aff_first_param | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello",
+            "world"
+          ],
+          "stdin": "",
+          "expected": "hello\n"
+        },
+        {
+          "args": [
+            "solo"
+          ],
+          "stdin": "",
+          "expected": "solo\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "aff_last_param": {
+      "id": "aff_last_param",
+      "name": "aff_last_param",
+      "filename": "aff_last_param.c",
+      "allowedFiles": [
+        "aff_last_param.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C00",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "aff_last_param",
+        "filename": "aff_last_param.c",
+        "allowed": "write",
+        "description": "Write a program that displays its last parameter followed by a\nnewline.\nIf there are no parameters, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./aff_last_param \"hello\" \"world\" | cat -e\nworld$\n$> ./aff_last_param \"solo\" | cat -e\nsolo$\n$> ./aff_last_param | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello",
+            "world"
+          ],
+          "stdin": "",
+          "expected": "world\n"
+        },
+        {
+          "args": [
+            "solo"
+          ],
+          "stdin": "",
+          "expected": "solo\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "last_word": {
+      "id": "last_word",
+      "name": "last_word",
+      "filename": "last_word.c",
+      "allowedFiles": [
+        "last_word.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "last_word",
+        "filename": "last_word.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string (a sentence, quote it if it\ncontains spaces) as its only parameter and displays its last word\n(words are separated by one or more spaces), followed by a newline.\nIf there is no word (empty string, only spaces), or the number of\nparameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./last_word \"hello world foo\" | cat -e\nfoo$\n$> ./last_word \"  a  b  \" | cat -e\nb$\n$> ./last_word \"   \" | cat -e\n$\n$> ./last_word | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello world foo"
+          ],
+          "stdin": "",
+          "expected": "foo\n"
+        },
+        {
+          "args": [
+            "  a  b  "
+          ],
+          "stdin": "",
+          "expected": "b\n"
+        },
+        {
+          "args": [
+            "   "
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "union": {
+      "id": "union",
+      "name": "union",
+      "filename": "union.c",
+      "allowedFiles": [
+        "union.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "union",
+        "filename": "union.c",
+        "allowed": "write",
+        "description": "Write a program that takes two strings as parameters and displays every\ndistinct character that appears in either string, each once, in order\nof first appearance (scanning the first string then the second),\nfollowed by a newline.\nIf the number of parameters is not 2, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./union \"abc\" \"bcd\" | cat -e\nabcd$\n$> ./union \"\" \"xyz\" | cat -e\nxyz$\n$> ./union | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "abc",
+            "bcd"
+          ],
+          "stdin": "",
+          "expected": "abcd\n"
+        },
+        {
+          "args": [
+            "",
+            "xyz"
+          ],
+          "stdin": "",
+          "expected": "xyz\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "inter": {
+      "id": "inter",
+      "name": "inter",
+      "filename": "inter.c",
+      "allowedFiles": [
+        "inter.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "inter",
+        "filename": "inter.c",
+        "allowed": "write",
+        "description": "Write a program that takes two strings as parameters and displays every\ndistinct character that appears in both strings, each once, in order\nof first appearance in the first string, followed by a newline.\nIf the number of parameters is not 2, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./inter \"abc\" \"bcd\" | cat -e\nbc$\n$> ./inter \"abc\" \"xyz\" | cat -e\n$\n$> ./inter | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "abc",
+            "bcd"
+          ],
+          "stdin": "",
+          "expected": "bc\n"
+        },
+        {
+          "args": [
+            "abc",
+            "xyz"
+          ],
+          "stdin": "",
+          "expected": "\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "wdmatch": {
+      "id": "wdmatch",
+      "name": "wdmatch",
+      "filename": "wdmatch.c",
+      "allowedFiles": [
+        "wdmatch.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "wdmatch",
+        "filename": "wdmatch.c",
+        "allowed": "write",
+        "description": "Write a program that takes two strings as parameters and displays `1`\nfollowed by a newline if the first string is a subsequence of the\nsecond (its characters appear in the second string in the same order,\nnot necessarily contiguous), otherwise displays `0` followed by a\nnewline.\nIf the number of parameters is not 2, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./wdmatch \"ace\" \"abcde\" | cat -e\n1$\n$> ./wdmatch \"aec\" \"abcde\" | cat -e\n0$\n$> ./wdmatch \"\" \"abc\" | cat -e\n1$\n$> ./wdmatch | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "ace",
+            "abcde"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [
+            "aec",
+            "abcde"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [
+            "",
+            "abc"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "is_palindrome": {
+      "id": "is_palindrome",
+      "name": "is_palindrome",
+      "filename": "is_palindrome.c",
+      "allowedFiles": [
+        "is_palindrome.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "is_palindrome",
+        "filename": "is_palindrome.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\n`1` followed by a newline if it reads the same forwards and backwards\n(case-sensitive, character by character), otherwise displays `0`\nfollowed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./is_palindrome \"kayak\" | cat -e\n1$\n$> ./is_palindrome \"hello\" | cat -e\n0$\n$> ./is_palindrome \"a\" | cat -e\n1$\n$> ./is_palindrome | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "kayak"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [
+            "hello"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [
+            "a"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "title": {
+      "id": "title",
+      "name": "title",
+      "filename": "title.c",
+      "allowedFiles": [
+        "title.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "title",
+        "filename": "title.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\nit in Title Case: the first letter of every word capitalized, every\nother letter lowercased, and any non-letter character left untouched.\nA new word starts at the beginning of the string and right after any\nnon-alphabetic character. The result is followed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./title \"hello world\" | cat -e\nHello World$\n$> ./title \"MULTIPLE   SPACES here\" | cat -e\nMultiple   Spaces Here$\n$> ./title | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello world"
+          ],
+          "stdin": "",
+          "expected": "Hello World\n"
+        },
+        {
+          "args": [
+            "MULTIPLE   SPACES here"
+          ],
+          "stdin": "",
+          "expected": "Multiple   Spaces Here\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "search_and_replace": {
+      "id": "search_and_replace",
+      "name": "search_and_replace",
+      "filename": "search_and_replace.c",
+      "allowedFiles": [
+        "search_and_replace.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "search_and_replace",
+        "filename": "search_and_replace.c",
+        "allowed": "write",
+        "description": "Write a program that takes three strings as parameters: a haystack, a\nneedle, and a replacement. It displays the haystack with every\nnon-overlapping occurrence of the needle replaced by the replacement,\nfollowed by a newline. If the needle is empty, the haystack is\ndisplayed unchanged.\nIf the number of parameters is not 3, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./search_and_replace \"hello world hello\" \"hello\" \"hi\" | cat -e\nhi world hi$\n$> ./search_and_replace \"aaa\" \"aa\" \"b\" | cat -e\nba$\n$> ./search_and_replace \"abc\" \"x\" \"y\" | cat -e\nabc$\n$> ./search_and_replace | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "hello world hello",
+            "hello",
+            "hi"
+          ],
+          "stdin": "",
+          "expected": "hi world hi\n"
+        },
+        {
+          "args": [
+            "aaa",
+            "aa",
+            "b"
+          ],
+          "stdin": "",
+          "expected": "ba\n"
+        },
+        {
+          "args": [
+            "abc",
+            "x",
+            "y"
+          ],
+          "stdin": "",
+          "expected": "abc\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "base16": {
+      "id": "base16",
+      "name": "base16",
+      "filename": "base16.c",
+      "allowedFiles": [
+        "base16.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C01",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "base16",
+        "filename": "base16.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\nit encoded in base16 (hexadecimal): each byte becomes two uppercase hex\ndigits, concatenated with no separator, followed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./base16 \"AB\" | cat -e\n4142$\n$> ./base16 \"hi\" | cat -e\n6869$\n$> ./base16 | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "AB"
+          ],
+          "stdin": "",
+          "expected": "4142\n"
+        },
+        {
+          "args": [
+            "hi"
+          ],
+          "stdin": "",
+          "expected": "6869\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "ft_split": {
+      "id": "ft_split",
+      "name": "ft_split",
+      "filename": "ft_split.c",
+      "allowedFiles": [
+        "ft_split.c"
+      ],
+      "type": "function",
+      "allowed": "malloc, free",
+      "day": "C03",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "ft_split",
+        "filename": "ft_split.c",
+        "allowed": "malloc, free",
+        "description": "Split the string `s` into an array of strings, using `c` as a\ndelimiter. Consecutive delimiters do not produce empty strings.\nReturn a `NULL`-terminated, malloc'd array of malloc'd strings.",
+        "prototype": "char\t**ft_split(char *s, char c);",
+        "notes": [
+          "Do not include a `main` in your file — the grader links its own.",
+          "Every string in the array (and the array itself) must be freeable."
+        ],
+        "hint": null,
+        "examples": null
+      },
+      "grader": "#include <stdlib.h>\n#include <unistd.h>\n\nchar **ft_split(char *s, char c);\n\nstatic void put_str(char *s)\n{\n\tint i;\n\n\ti = 0;\n\twhile (s[i])\n\t\ti++;\n\twrite(1, s, i);\n}\n\nint main(void)\n{\n\tchar **r;\n\tint i;\n\n\tr = ft_split(\"  a,bb,,ccc  ,d\", ',');\n\ti = 0;\n\twhile (r && r[i])\n\t{\n\t\tput_str(r[i]);\n\t\twrite(1, \"|\", 1);\n\t\ti++;\n\t}\n\twrite(1, \"\\n\", 1);\n\treturn (0);\n}\n",
+      "helpers": [],
+      "headerFile": null,
+      "expected": "  a|bb|ccc  |d|\n"
+    },
+    "ft_list_remove_if": {
+      "id": "ft_list_remove_if",
+      "name": "ft_list_remove_if",
+      "filename": "ft_list_remove_if.c",
+      "allowedFiles": [
+        "ft_list_remove_if.c"
+      ],
+      "type": "function",
+      "allowed": "malloc, free",
+      "day": "C11",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "ft_list_remove_if",
+        "filename": "ft_list_remove_if.c",
+        "allowed": "malloc, free",
+        "description": "Given a singly-linked list of `int` (see `t_list` below) and a value,\nremove every node whose `value` matches from the list, freeing each\nremoved node.\nA `t_list.h` header defining the list type is provided automatically —\nadd `#include \"t_list.h\"` at the top of your file to use it.",
+        "prototype": "typedef struct s_list\n{\n\tint\t\t\t\tvalue;\n\tstruct s_list\t*next;\n}\tt_list;\n\nvoid\tft_list_remove_if(t_list **begin_list, int value);",
+        "notes": null,
+        "hint": null,
+        "examples": null
+      },
+      "grader": "#include \"t_list.h\"\n#include <stdlib.h>\n#include <unistd.h>\n\nvoid ft_list_remove_if(t_list **begin_list, int value);\n\nstatic void put_nbr(int n)\n{\n\tchar c;\n\n\tif (n < 0)\n\t{\n\t\twrite(1, \"-\", 1);\n\t\tn = -n;\n\t}\n\tif (n >= 10)\n\t\tput_nbr(n / 10);\n\tc = (char)('0' + n % 10);\n\twrite(1, &c, 1);\n}\n\nstatic t_list *new_node(int v)\n{\n\tt_list *n;\n\n\tn = (t_list *)malloc(sizeof(t_list));\n\tn->value = v;\n\tn->next = 0;\n\treturn (n);\n}\n\nint main(void)\n{\n\tint vals[8] = {1, 2, 3, 2, 4, 2, 5, 2};\n\tt_list *head;\n\tt_list *tail;\n\tt_list *cur;\n\tint i;\n\n\thead = 0;\n\ttail = 0;\n\ti = 0;\n\twhile (i < 8)\n\t{\n\t\tif (!head)\n\t\t{\n\t\t\thead = new_node(vals[i]);\n\t\t\ttail = head;\n\t\t}\n\t\telse\n\t\t{\n\t\t\ttail->next = new_node(vals[i]);\n\t\t\ttail = tail->next;\n\t\t}\n\t\ti++;\n\t}\n\tft_list_remove_if(&head, 2);\n\tcur = head;\n\twhile (cur)\n\t{\n\t\tput_nbr(cur->value);\n\t\tif (cur->next)\n\t\t\twrite(1, \",\", 1);\n\t\tcur = cur->next;\n\t}\n\twrite(1, \"\\n\", 1);\n\treturn (0);\n}\n",
+      "helpers": [],
+      "headerFile": "typedef struct s_list\n{\n\tint\t\t\t\tvalue;\n\tstruct s_list\t*next;\n}\tt_list;\n",
+      "expected": "1,3,4,5\n"
+    },
+    "sort_list": {
+      "id": "sort_list",
+      "name": "sort_list",
+      "filename": "sort_list.c",
+      "allowedFiles": [
+        "sort_list.c"
+      ],
+      "type": "function",
+      "allowed": "None",
+      "day": "C11",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "sort_list",
+        "filename": "sort_list.c",
+        "allowed": "None",
+        "description": "Given a singly-linked list of `int` (see `t_list` below), sort it in\nplace in ascending order by swapping node `value`s (do not reallocate\nor relink nodes).\nA `t_list.h` header defining the list type is provided automatically —\nadd `#include \"t_list.h\"` at the top of your file to use it.",
+        "prototype": "typedef struct s_list\n{\n\tint\t\t\t\tvalue;\n\tstruct s_list\t*next;\n}\tt_list;\n\nvoid\tsort_list(t_list *begin_list);",
+        "notes": null,
+        "hint": null,
+        "examples": null
+      },
+      "grader": "#include \"t_list.h\"\n#include <stdlib.h>\n#include <unistd.h>\n\nvoid sort_list(t_list *begin_list);\n\nstatic void put_nbr(int n)\n{\n\tchar c;\n\n\tif (n < 0)\n\t{\n\t\twrite(1, \"-\", 1);\n\t\tn = -n;\n\t}\n\tif (n >= 10)\n\t\tput_nbr(n / 10);\n\tc = (char)('0' + n % 10);\n\twrite(1, &c, 1);\n}\n\nstatic t_list *new_node(int v)\n{\n\tt_list *n;\n\n\tn = (t_list *)malloc(sizeof(t_list));\n\tn->value = v;\n\tn->next = 0;\n\treturn (n);\n}\n\nint main(void)\n{\n\tint vals[6] = {5, 3, 8, 1, 9, 2};\n\tt_list *head;\n\tt_list *tail;\n\tt_list *cur;\n\tint i;\n\n\thead = 0;\n\ttail = 0;\n\ti = 0;\n\twhile (i < 6)\n\t{\n\t\tif (!head)\n\t\t{\n\t\t\thead = new_node(vals[i]);\n\t\t\ttail = head;\n\t\t}\n\t\telse\n\t\t{\n\t\t\ttail->next = new_node(vals[i]);\n\t\t\ttail = tail->next;\n\t\t}\n\t\ti++;\n\t}\n\tsort_list(head);\n\tcur = head;\n\twhile (cur)\n\t{\n\t\tput_nbr(cur->value);\n\t\tif (cur->next)\n\t\t\twrite(1, \",\", 1);\n\t\tcur = cur->next;\n\t}\n\twrite(1, \"\\n\", 1);\n\treturn (0);\n}\n",
+      "helpers": [],
+      "headerFile": "typedef struct s_list\n{\n\tint\t\t\t\tvalue;\n\tstruct s_list\t*next;\n}\tt_list;\n",
+      "expected": "1,2,3,5,8,9\n"
+    },
+    "count_alpha": {
+      "id": "count_alpha",
+      "name": "count_alpha",
+      "filename": "count_alpha.c",
+      "allowedFiles": [
+        "count_alpha.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C02",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "count_alpha",
+        "filename": "count_alpha.c",
+        "allowed": "write",
+        "description": "Write a program that takes a string as its only parameter and displays\nthe number of alphabetic characters (`a`-`z`, `A`-`Z`) it contains,\nfollowed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./count_alpha \"Hello, World! 123\" | cat -e\n10$\n$> ./count_alpha \"xyz\" | cat -e\n3$\n$> ./count_alpha | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "Hello, World! 123"
+          ],
+          "stdin": "",
+          "expected": "10\n"
+        },
+        {
+          "args": [
+            "xyz"
+          ],
+          "stdin": "",
+          "expected": "3\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "ord_alphlong": {
+      "id": "ord_alphlong",
+      "name": "ord_alphlong",
+      "filename": "ord_alphlong.c",
+      "allowedFiles": [
+        "ord_alphlong.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C02",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "ord_alphlong",
+        "filename": "ord_alphlong.c",
+        "allowed": "write",
+        "description": "Write a program that takes several strings as parameters and displays\nthem, space-separated, sorted by their number of alphabetic characters\nin descending order (ties keep their original relative order),\nfollowed by a newline.\nIf there are no parameters, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./ord_alphlong \"ab\" \"abc\" \"a\" | cat -e\nabc ab a$\n$> ./ord_alphlong \"x\" \"abcdef\" \"yz\" | cat -e\nabcdef yz x$\n$> ./ord_alphlong | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "ab",
+            "abc",
+            "a"
+          ],
+          "stdin": "",
+          "expected": "abc ab a\n"
+        },
+        {
+          "args": [
+            "x",
+            "abcdef",
+            "yz"
+          ],
+          "stdin": "",
+          "expected": "abcdef yz x\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "str_maxlenoc": {
+      "id": "str_maxlenoc",
+      "name": "str_maxlenoc",
+      "filename": "str_maxlenoc.c",
+      "allowedFiles": [
+        "str_maxlenoc.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "C02",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "str_maxlenoc",
+        "filename": "str_maxlenoc.c",
+        "allowed": "write",
+        "description": "Write a program that takes several strings as parameters. Find the\nfirst string with the maximum length, then count how many parameters\nare exactly equal to it. Display that string, a single space, and the\ncount, followed by a newline.\nIf there are no parameters, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./str_maxlenoc \"ab\" \"abc\" \"de\" \"abc\" | cat -e\nabc 2$\n$> ./str_maxlenoc \"solo\" | cat -e\nsolo 1$\n$> ./str_maxlenoc | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "ab",
+            "abc",
+            "de",
+            "abc"
+          ],
+          "stdin": "",
+          "expected": "abc 2\n"
+        },
+        {
+          "args": [
+            "solo"
+          ],
+          "stdin": "",
+          "expected": "solo 1\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "count_island": {
+      "id": "count_island",
+      "name": "count_island",
+      "filename": "count_island.c",
+      "allowedFiles": [
+        "count_island.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "Exam",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "count_island",
+        "filename": "count_island.c",
+        "allowed": "write",
+        "description": "Write a program that takes one parameter: a grid where rows are\nseparated by commas and cells are `1` (land) or `0` (water). Display\nthe number of islands, where an island is a group of `1`s connected\nhorizontally or vertically (not diagonally), followed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./count_island \"11000,11000,00100,00011\" | cat -e\n3$\n$> ./count_island \"1\" | cat -e\n1$\n$> ./count_island \"0\" | cat -e\n0$\n$> ./count_island | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "11000,11000,00100,00011"
+          ],
+          "stdin": "",
+          "expected": "3\n"
+        },
+        {
+          "args": [
+            "1"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [
+            "0"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "g_diam": {
+      "id": "g_diam",
+      "name": "g_diam",
+      "filename": "g_diam.c",
+      "allowedFiles": [
+        "g_diam.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "Exam",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "g_diam",
+        "filename": "g_diam.c",
+        "allowed": "write",
+        "description": "Write a program that takes one parameter describing an undirected,\nunweighted graph: edges separated by commas, each edge written as\n`a-b` where `a` and `b` are node ids (non-negative integers). Display\nthe graph's diameter — the longest shortest path between any two\nnodes that are connected to each other — followed by a newline.\nIf the number of parameters is not 1, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./g_diam \"0-1,1-2,2-3\" | cat -e\n3$\n$> ./g_diam \"0-1,0-2,0-3\" | cat -e\n2$\n$> ./g_diam \"0-1\" | cat -e\n1$\n$> ./g_diam | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "0-1,1-2,2-3"
+          ],
+          "stdin": "",
+          "expected": "3\n"
+        },
+        {
+          "args": [
+            "0-1,0-2,0-3"
+          ],
+          "stdin": "",
+          "expected": "2\n"
+        },
+        {
+          "args": [
+            "0-1"
+          ],
+          "stdin": "",
+          "expected": "1\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    },
+    "infin_mult": {
+      "id": "infin_mult",
+      "name": "infin_mult",
+      "filename": "infin_mult.c",
+      "allowedFiles": [
+        "infin_mult.c"
+      ],
+      "type": "program",
+      "allowed": "write",
+      "day": "Exam",
+      "origin": "poolers-final",
+      "subject": {
+        "name": "infin_mult",
+        "filename": "infin_mult.c",
+        "allowed": "write",
+        "description": "Write a program that takes two non-negative integers as strings\n(arbitrarily large — too big to fit in any native integer type) and\ndisplays their product as a decimal string, followed by a newline, with\nno leading zeros (except the result `0` itself).\nIf the number of parameters is not 2, simply display a newline.",
+        "prototype": null,
+        "notes": null,
+        "hint": null,
+        "examples": "$> ./infin_mult \"123\" \"456\" | cat -e\n56088$\n$> ./infin_mult \"999999999999999999\" \"2\" | cat -e\n1999999999999999998$\n$> ./infin_mult \"0\" \"12345\" | cat -e\n0$\n$> ./infin_mult | cat -e\n$\n$>"
+      },
+      "testCases": [
+        {
+          "args": [
+            "123",
+            "456"
+          ],
+          "stdin": "",
+          "expected": "56088\n"
+        },
+        {
+          "args": [
+            "999999999999999999",
+            "2"
+          ],
+          "stdin": "",
+          "expected": "1999999999999999998\n"
+        },
+        {
+          "args": [
+            "0",
+            "12345"
+          ],
+          "stdin": "",
+          "expected": "0\n"
+        },
+        {
+          "args": [],
+          "stdin": "",
+          "expected": "\n"
+        }
+      ]
+    }
+  },
+  "levels": [
+    {
+      "level": 0,
+      "exerciseIds": [
+        "ft_putstr",
+        "rev_print",
+        "maff_alpha",
+        "maff_revalpha",
+        "write_string",
+        "odd",
+        "even",
+        "interval_space"
+      ]
+    },
+    {
+      "level": 1,
+      "exerciseIds": [
+        "occ_a",
+        "occ_z",
+        "ft_strlen",
+        "count_len",
+        "count_alen"
+      ]
+    },
+    {
+      "level": 2,
+      "exerciseIds": [
+        "nth_char"
+      ]
+    },
+    {
+      "level": 3,
+      "exerciseIds": [
+        "rle",
+        "digit_sum"
+      ]
+    },
+    {
+      "level": 4,
+      "exerciseIds": [
+        "first_last_char",
+        "count_letters",
+        "pingpong"
+      ]
+    },
+    {
+      "level": 5,
+      "exerciseIds": [
+        "ft_putnbr"
+      ]
+    },
+    {
+      "level": 6,
+      "exerciseIds": [
+        "aff_first_param",
+        "aff_last_param"
+      ]
+    },
+    {
+      "level": 7,
+      "exerciseIds": [
+        "last_word",
+        "union",
+        "inter",
+        "wdmatch",
+        "is_palindrome",
+        "title",
+        "search_and_replace"
+      ]
+    },
+    {
+      "level": 8,
+      "exerciseIds": [
+        "base16"
+      ]
+    },
+    {
+      "level": 9,
+      "exerciseIds": [
+        "ft_range",
+        "ft_rrange",
+        "ft_itoa"
+      ]
+    },
+    {
+      "level": 10,
+      "exerciseIds": [
+        "ft_split"
+      ]
+    },
+    {
+      "level": 11,
+      "exerciseIds": [
+        "ft_list_remove_if",
+        "sort_list"
+      ]
+    },
+    {
+      "level": 12,
+      "exerciseIds": [
+        "count_alpha"
+      ]
+    },
+    {
+      "level": 13,
+      "exerciseIds": [
+        "ord_alphlong",
+        "str_maxlenoc"
+      ]
+    },
+    {
+      "level": 14,
+      "exerciseIds": [
+        "count_island",
+        "g_diam",
+        "infin_mult"
+      ]
+    }
+  ]
+}
